@@ -1,0 +1,232 @@
+/* General Styles */
+.home-header-container {
+  box-shadow: 0px 0px 16px #C0C0C0;
+  height: 60px;
+  width: 100%;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header Content */
+.home-header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  background: url("../../assets/hospital-icon.png") left center no-repeat;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.child-content {
+  text-align: center;
+}
+
+.subs-title {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.language-option {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.language-option.active,
+.language-option:hover {
+  opacity: 1;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .home-header-container {
+    padding: 0 15px;
+  }
+  .center-content {
+    display: none;
+  }
+}
+
+/* Banner Styles */
+.home-header-banner {
+  position: relative;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 20s infinite;
+  opacity: 0;
+}
+
+.slide1 { background-image: url("../../assets/test1.jpg"); animation-delay: 0s; }
+.slide2 { background-image: url("../../assets/test2.png"); animation-delay: 5s; }
+.slide3 { background-image: url("../../assets/test3.jpg"); animation-delay: 10s; }
+.slide4 { background-image: url("../../assets/test4.png"); animation-delay: 15s; }
+
+@keyframes slideShow {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.content-up {
+  position: relative;
+  height: 50%;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.title1, .title2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: black;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 25px;
+  background: #f7d800;
+  max-width: 400px;
+}
+
+.search-bar input {
+  height: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.content-down {
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.option-child {
+  width: 100px;
+}
+
+.icon-child {
+  background: white;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.icon-child i {
+  color: #49bce2;
+  font-size: 20px;
+}
+
+.text-child {
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.text-child:hover {
+  color: #49bce2;
+}
+
+.avatar-profile {
+  min-height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .home-header-banner {
+    height: 300px;
+  }
+  .title1, .title2 {
+    font-size: 28px;
+  }
+  .search-bar {
+    max-width: 90%;
+  }
+  .options {
+    gap: 20px;
+  }
+  .option-child {
+    width: 80px;
+  }
+}
